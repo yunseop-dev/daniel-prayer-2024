@@ -1,8 +1,9 @@
-import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
+import { defineConfig } from 'astro/config'
 import { remarkReadingTime } from './src/utils/readTime.ts'
+import orama from "@orama/plugin-astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,12 +23,18 @@ export default defineConfig({
 				experimentalThemes: {
 					light: 'vitesse-light',
 					dark: 'material-theme-palenight',
-				  },
+				},
 				wrap: true
 			},
 			drafts: true
 		}),
 		sitemap(),
-		tailwind()
+		tailwind(),
+		orama({
+			// We can generate more than one DB, with different configurations
+			mydb: {
+				pathMatcher: /\/post\/.+$/,
+			}
+		}),
 	]
 })
