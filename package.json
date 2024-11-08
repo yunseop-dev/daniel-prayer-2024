@@ -7,7 +7,7 @@
 	"license": "GPL-3.0-only",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/danielcgilibert/blog-template"
+		"url": "https://github.com/yunseop-dev/daniel-prayer-2024"
 	},
 	"keywords": [
 		"astro",
@@ -17,7 +17,7 @@
 		"astro-b"
 	],
 	"bugs": {
-		"url": "https://github.com/danielcgilibert/blog-template/issues"
+		"url": "https://github.com/yunseop-dev/daniel-prayer-2024/issues"
 	},
 	"scripts": {
 		"dev": "npx tinacms dev -c \"astro dev\"",
@@ -30,12 +30,15 @@
 		"format": "prettier --plugin-search-dir=. --write .",
 		"lint": "eslint .",
 		"pre-commit": "lint-staged",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"gen": "tsx src/scripts/generate-content.ts"
 	},
 	"dependencies": {
 		"@astrojs/rss": "4.0.9",
 		"astro": "4.16.7",
-		"astro-font": "^0.0.72"
+		"astro-font": "^0.0.72",
+		"axios": "^1.7.7",
+		"pako": "^2.1.0"
 	},
 	"devDependencies": {
 		"@astrojs/mdx": "3.1.8",
@@ -44,6 +47,7 @@
 		"@pagefind/default-ui": "^1.0.4",
 		"@tailwindcss/typography": "0.5.10",
 		"@tinacms/cli": "^1.5.30",
+		"@types/pako": "^2.0.3",
 		"@typescript-eslint/parser": "^6.16.0",
 		"clsx": "2.0.0",
 		"eslint": "^8.56.0",
@@ -62,11 +66,13 @@
 		"tailwind-merge": "2.0.0",
 		"tailwindcss": "3.3.5",
 		"tinacms": "^1.5.21",
+		"tsx": "^4.19.2",
 		"typescript": "^5.2.2"
 	},
 	"lint-staged": {
 		"*.{astro,js,jsx,ts,tsx,md,mdx,json}": [
 			"prettier --write --plugin-search-dir=."
 		]
-	}
+	},
+	"packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }
