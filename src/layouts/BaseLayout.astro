@@ -6,17 +6,44 @@ import ProviderTheme from '@/components/ProviderTheme'
 import ProviderAnimations from '@/components/ProviderAnimations'
 import TwSizeIndicator from '@/components/TwSizeIndicator'
 import EditBlog from '@/components/editBlog'
+
 const { title, description, image, articleDate } = Astro.props
+const gtmId = await import.meta.env.PUBLIC_GTM_ID
 ---
 
 <html lang='en' class='scroll-smooth'>
 	<head>
+		<!-- Google Tag Manager -->
+		<script is:inline define:vars={{ gtmId }}>
+			;(function (w, d, s, l, i) {
+				w[l] = w[l] || []
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : ''
+				j.async = true
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+				f.parentNode.insertBefore(j, f)
+			})(window, document, 'script', 'dataLayer', gtmId)
+		</script>
+		<!-- End Google Tag Manager -->
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
 		<ProviderTheme />
 		<ProviderAnimations />
 	</head>
 
 	<body class='bg-white text-stone-950 dark:bg-[#0a0910] dark:text-white'>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe
+				src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+				height='0'
+				width='0'
+				style='display:none;visibility:hidden'
+			>
+			</iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<main
 			class='px-5 sm:mx-auto sm:max-w-2xl sm:px-8 lg:px-0 antialiased md:max-w-6xl grid gap-12 mt-4 overflow-hidden md:overflow-visible'
 		>
