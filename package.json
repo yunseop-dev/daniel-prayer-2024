@@ -1,9 +1,9 @@
 {
-	"name": "blog-template",
+	"name": "daniel-prayer-2024",
 	"type": "module",
 	"version": "1.1.0",
-	"description": "A template for creating a blog with Astro",
-	"author": "danielcgilibert",
+	"description": "2024 다니엘 기도회 설교 모음",
+	"author": "Yunseop Kim",
 	"license": "GPL-3.0-only",
 	"repository": {
 		"type": "git",
@@ -33,14 +33,14 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
-		"@astrojs/rss": "4.0.1",
-		"astro": "4.0.8",
+		"@astrojs/rss": "4.0.9",
+		"astro": "4.16.7",
 		"astro-font": "^0.0.72"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "2.0.3",
-		"@astrojs/sitemap": "3.0.4",
-		"@astrojs/tailwind": "5.1.0",
+		"@astrojs/mdx": "3.1.8",
+		"@astrojs/sitemap": "3.2.1",
+		"@astrojs/tailwind": "5.1.2",
 		"@pagefind/default-ui": "^1.0.4",
 		"@tailwindcss/typography": "0.5.10",
 		"@tinacms/cli": "^1.5.30",
