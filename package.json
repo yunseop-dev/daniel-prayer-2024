@@ -53,7 +53,7 @@
 		"@astrojs/sitemap": "3.2.1",
 		"@astrojs/tailwind": "5.1.2",
 		"@pagefind/default-ui": "^1.0.4",
-		"@tailwindcss/typography": "0.5.10",
+		"@tailwindcss/typography": "0.5.15",
 		"@tinacms/cli": "^1.5.30",
 		"@types/pako": "^2.0.3",
 		"@typescript-eslint/parser": "^6.16.0",
