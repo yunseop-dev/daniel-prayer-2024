@@ -17,13 +17,13 @@ const { posts } = Astro.props
 			posts.map((post) => {
 				return (
 					<div class='flex flex-wrap gap-2'>
-						<div class='min-h-full'>
+						<div class='mx-auto'>
 							<Image
 								src={post.data.heroImage}
 								width={200}
 								height={200}
 								format='webp'
-								class='w-16 h-16 object-cover rounded-full  '
+								class='object-cover'
 								alt={`img of ${post.data.title}`}
 							/>
 						</div>
