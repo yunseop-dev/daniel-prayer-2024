@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 import orama from "@orama/plugin-astro";
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,5 +37,6 @@ export default defineConfig({
 				pathMatcher: /\/post\/.+$/,
 			}
 		}),
+		react(),
 	]
 })

@@ -9,6 +9,7 @@ const blog = defineCollection({
 			date: z.date(),
 			lastUpdated: z.date(),
 			heroImage: image().optional(),
+			youtubeId: z.string(),
 			category: z.enum(CATEGORIES),
 			tags: z.array(z.string())
 		})

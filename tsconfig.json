@@ -4,6 +4,7 @@
 		"strictNullChecks": true,
 		"baseUrl": ".",
 		"paths": {
+			"@/components/react/*": ["src/components/react/*.tsx"],
 			"@/components/*": ["src/components/*.astro"],
 			"@/layouts/*": ["src/layouts/*.astro"],
 			"@/utils": ["src/utils/index.ts"],

@@ -34,12 +34,19 @@
 		"gen": "tsx src/scripts/generate-content.ts"
 	},
 	"dependencies": {
+		"@astrojs/react": "^3.6.2",
 		"@astrojs/rss": "4.0.9",
 		"@orama/plugin-astro": "^3.0.1",
+		"@orama/react-components": "^0.1.11",
+		"@types/react": "^18.3.12",
+		"@types/react-dom": "^18.3.1",
 		"astro": "4.16.7",
 		"astro-font": "^0.0.72",
 		"axios": "^1.7.7",
-		"pako": "^2.1.0"
+		"pako": "^2.1.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-youtube": "^10.1.0"
 	},
 	"devDependencies": {
 		"@astrojs/mdx": "3.1.8",
